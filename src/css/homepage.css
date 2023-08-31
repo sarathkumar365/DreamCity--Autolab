@@ -1,0 +1,331 @@
+/* Default Styling */
+@font-face {
+  font-family: "font--landing";
+  src: url("../assets/fonts/Newake-Font/newake-demo-400.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================== WIRTE YOUR STYLES HERE =================================== */
+
+.landing--page {
+  height: 100vh;
+  width: 100%;
+
+  background-color: #131313;
+  color: azure;
+
+  font-family: "ubuntu";
+
+  display: flex;
+}
+
+.landing--left,
+.landing--right {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2em;
+}
+
+.landing--left h1 {
+  font-size: 4rem;
+}
+
+.car--span {
+  color: #a2a2a2;
+  font-size: 6rem;
+}
+
+.landing--left {
+  margin-bottom: 10em;
+}
+
+.landing--right {
+  margin-bottom: 15em;
+
+  position: relative;
+}
+
+.services {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 13em;
+}
+
+/* .services--bttn {
+  padding: 0.5em 1.9em;
+
+  font-size: 1.2rem;
+
+  background-color: azure;
+  color: #131313;
+} */
+
+/* Button 49 CSS */
+
+.button-49:hover {
+  cursor: pointer;
+}
+
+.button-49,
+.button-49:after {
+  margin-right: 5em;
+  padding: 0.5em 1.9em;
+
+  line-height: 2.5em;
+  font-size: 1.2rem;
+  font-family: "Bebas Neue", sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 1.3px;
+  box-shadow: 6px 0px 0px #00e6f6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-49:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: "GET SERVICES";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #00e6f6 3%,
+    #00e6f6 5%,
+    #ff013c 5%
+  );
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+  clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+/* @media (min-width: 768px) {
+  .button-49,
+  .button-49:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+} */
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 480px) {
+  .landing--page {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+  }
+
+  .landing--left h1 {
+    font-size: 1.5rem;
+    text-align: center;
+
+    /* flex-direction: column; */
+  }
+
+  .car--span {
+    font-size: 1.9rem;
+  }
+
+  .landing--right {
+    margin-bottom: 4em;
+  }
+
+  .landing--left {
+    margin: 0;
+  }
+
+  .services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+  }
+
+  .button-49 {
+    margin: 0;
+
+    padding: 0.3em 0.3em;
+    line-height: normal;
+  }
+}
+
+/* CAR MOVING ANIMATION */
+
+/* #moving-car {
+  opacity: 1;
+  transition: left 2s ease-in-out, opacity 4s linear;
+}
+
+.fade-out {
+  left: 200em;
+  opacity: 0;
+  transition: left 2s ease-in-out, opacity 4s linear;
+} */
+
+.fade-out {
+  animation: fade 3s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    left: 200%;
+  }
+}
